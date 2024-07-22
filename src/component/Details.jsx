@@ -7,7 +7,7 @@ import Loading from './Loading'
 const Details = () => {
     const [product, setproduct] = useState(null)
     const { id } = useParams()
-    console.log(id)
+    // console.log(id)
 
     const getSingleProduct = async () => {
         try {
