@@ -1,14 +1,12 @@
 import { useState,useContext } from "react";
 import { ProductContext } from "../utils/context";
-import { nanoid } from "nanoid";
-import { json, useNavigate } from "react-router-dom";
+// import { nanoid } from "nanoid";
+// import { json, useNavigate } from "react-router-dom";
 
-const Create = () => {
-  const navigate =  useNavigate()
+const Edit = () => {
 
+    const navigate =  useNavigate()
   const [products, setproducts] = useContext(ProductContext)
-
-
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("")
   const [category, setCategory] = useState("")
@@ -42,6 +40,7 @@ const Create = () => {
     // console.log(product)
 
   }
+
 
   return (
     <form onSubmit={AddProductHandler} className='w-full items-center h-screen p-[5%] flex flex-col'>
@@ -97,4 +96,4 @@ const Create = () => {
   )
 }
 
-export default Create
+export default Edit
