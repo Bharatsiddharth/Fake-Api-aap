@@ -7,7 +7,7 @@ import Edit from './component/Edit'
 
 const App = () => {
   const { search, pathname} = useLocation();
-  console.log(search,pathname)
+  // console.log(search,pathname)
   return (
     <div className='w-full h-screen flex'>
      
