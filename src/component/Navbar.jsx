@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,24 +32,24 @@ function Navbar() {
       {/* Desktop Menu */}
       <ul className="hidden md:flex gap-6">
         <li>
-          <a href="/" className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
+          <Link to="/" className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/products" className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
+          <Link to="/products" className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
             Products
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#about" className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
+          <Link to="#about" className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
             About Us
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#contact" className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
+          <Link to="#contact" className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
 
@@ -58,10 +59,10 @@ function Navbar() {
           isOpen ? "flex" : "hidden"
         } absolute top-16 left-0 w-full bg-gray-800 flex-col gap-4 items-center text-white md:hidden`}
       >
-        <li><a href="/" className="py-2">Home</a></li>
-        <li><a href="products" className="py-2">Products</a></li>
-        <li><a href="#about" className="py-2">About Us</a></li>
-        <li><a href="#contact" className="py-2">Contact</a></li>
+        <li><Link to="/" className="py-2">Home</Link></li>
+        <li><Link to="/products" className="py-2">Products</Link></li>
+        <li><Link to="#about" className="py-2">About Us</Link></li>
+        <li><Link to="#contact" className="py-2">Contact</Link></li>
       </ul>
     </nav>
   );
