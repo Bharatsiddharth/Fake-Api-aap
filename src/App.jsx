@@ -7,10 +7,11 @@ import Edit from './component/Edit'
 import Navbar from './component/Navbar'
 import HeroSection from './component/HeroSection'
 import Footer from './component/Footer'
+import About from './component/About/About'
 
 
 const App = () => {
-  const { search, pathname} = useLocation();
+  // const { search, pathname} = useLocation();
   // console.log(search,pathname)
   return (
     
@@ -19,12 +20,13 @@ const App = () => {
     <div className='w-full h-screen flex'>
       <Navbar/>
      
-      {(pathname != '/' || search.length > 0) && (
+      {/* {(pathname != '/' || search.length > 0) && (
         <Link to={"/products"} className='text-red-700 absolute top-[10%] left-[17%]' >Back</Link>
       )}
-      
+       */}
       <Routes>
       <Route path='/' element={<HeroSection/>} />
+      <Route path='/about' element={<About/>} />
         <Route path='/products' element={<Home/>} />
         <Route path='/create' element={<Create/>} />
         <Route path='/details/:id' element={<Details/>} />

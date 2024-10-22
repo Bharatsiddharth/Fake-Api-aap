@@ -10,8 +10,10 @@ import axios from "../utils/axios"
 
 const Home = () => {
     const [products] = useContext(ProductContext)
-    const {search} = useLocation()
+    // const {search} = useLocation()
+    const { search, pathname} = useLocation();  
     const category = decodeURIComponent(search.split("=")[1]);
+   
     
 
     // let filteredproducts = products && products;
@@ -39,6 +41,9 @@ const Home = () => {
     return products ? (
         <>
             <Nav />
+            {(pathname != '/' || search.length > 0) && (
+        <Link to={"/products"} className='text-red-700 absolute top-[10%] left-[17%]' >Back</Link>
+      )}
             <div className=' mt-10 w-[85%]  p-10 pt-[5%] flex flex-wrap gap-5 overflow-x-hidden overflow-y-auto'>
 
                 {filteredProducts &&  filteredProducts.map((p, i) => (

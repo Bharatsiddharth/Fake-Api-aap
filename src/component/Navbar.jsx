@@ -42,7 +42,7 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="#about" className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
+          <Link to="/about" className="text-white hover:text-gray-200 transition duration-300 ease-in-out">
             About Us
           </Link>
         </li>
@@ -61,7 +61,7 @@ function Navbar() {
       >
         <li><Link to="/" className="py-2">Home</Link></li>
         <li><Link to="/products" className="py-2">Products</Link></li>
-        <li><Link to="#about" className="py-2">About Us</Link></li>
+        <li><Link to="/about" className="py-2">About Us</Link></li>
         <li><Link to="#contact" className="py-2">Contact</Link></li>
       </ul>
     </nav>
