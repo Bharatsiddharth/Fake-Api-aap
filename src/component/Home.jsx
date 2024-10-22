@@ -39,7 +39,7 @@ const Home = () => {
     return products ? (
         <>
             <Nav />
-            <div className=' w-[85%]  p-10 pt-[5%] flex flex-wrap gap-5 overflow-x-hidden overflow-y-auto'>
+            <div className=' mt-10 w-[85%]  p-10 pt-[5%] flex flex-wrap gap-5 overflow-x-hidden overflow-y-auto'>
 
                 {filteredProducts &&  filteredProducts.map((p, i) => (
 

@@ -31,7 +31,7 @@ const nav = () => {
                 <div className=' w-[80%]' >
 
                     {distinct_category.map((c, i) => (
-                        <Link key={i} to={`/?category=${c}`} className=' flex items-center mb-3'>
+                        <Link key={i} to={`/products?category=${c}`} className=' flex items-center mb-3'>
                             <span style={{backgroundColor: color()}} className='w-[15px] h-[15px]   rounded-full mr-2'></span>
                             {c}
                         </Link>
